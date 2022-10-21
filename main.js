@@ -60,4 +60,30 @@ const cars = [
    
 ]
 
-console.log(cars)
+
+
+const benzinaCars = cars.filter(element => {
+    if (element.alimentazione === 'benzina') {
+        return true;
+    }
+    return false;
+
+});
+const dieselCars = cars.filter(element => {
+    if (element.alimentazione === 'diesel') {
+        return true;
+    }
+    return false;
+
+});
+
+const anotherCars = cars.filter(element => {
+    if (element.alimentazione !== 'diesel' && element.alimentazione !== 'benzina') {
+        return true;
+    }
+    return false;
+});
+
+console.log(benzinaCars)
+console.log(dieselCars)
+console.log(anotherCars)
